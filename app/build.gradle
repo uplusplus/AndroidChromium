@@ -11,8 +11,8 @@ android {
     enforceUniquePackageName false
     defaultConfig {
         applicationId "org.chromium.chrome.browser"
-        minSdkVersion 19
-        targetSdkVersion 25
+        minSdkVersion 17
+        targetSdkVersion 19
         versionCode 1
         versionName "1.0"
         multiDexEnabled true

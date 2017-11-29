@@ -51,10 +51,6 @@ import java.util.Vector;
 public class ChromeBrowserProvider extends ContentProvider {
     private static final String TAG = "ChromeBrowserProvider";
 
-    /**
-     * A projection of {@link #SEARCHES_URI} that contains {@link SearchColumns#ID},
-     * {@link SearchColumns#SEARCH}, and {@link SearchColumns#DATE}.
-     */
     @VisibleForTesting
     @SuppressFBWarnings("MS_PKGPROTECT")
     public static final String[] SEARCHES_PROJECTION = new String[] {
@@ -1246,4 +1242,9 @@ public class ChromeBrowserProvider extends ContentProvider {
 
     private native int nativeRemoveSearchTermFromAPI(long nativeChromeBrowserProvider,
             String selection, String[] selectionArgs);
+
+    static{
+//        System.loadLibrary("chrome");
+//        System.loadLibrary("chrome_android_linker");
+    }
 }

@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.SystemClock;
+import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import org.chromium.base.ActivityState;
@@ -85,6 +86,7 @@ public class ChromeApplication extends ContentApplication {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
+        MultiDex.install(this);
         ContextUtils.initApplicationContext(this);
     }
 
